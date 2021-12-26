@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  python_gpu:
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: ["gpu"]
