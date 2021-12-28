@@ -9,3 +9,5 @@ services:
             - driver: nvidia
               count: all
               capabilities: ["gpu"]
+    volumes:
+      - .user_config:/root/.jupyter/user-settings
